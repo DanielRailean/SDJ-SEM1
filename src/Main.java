@@ -5,7 +5,6 @@ public class Main {
         System.out.print("Buddy!");
         System.out.print("WORKS?");
         System.out.print("Hello World!");
-        System.out.println("Iomaio");
-        
+
     }
 }
