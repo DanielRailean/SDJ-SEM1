@@ -4,10 +4,18 @@ public class MyDate
   private int month;
   private int year;
 
-  public void setDate(int d, int m, int y){
-    day = d;
-    month  = m;
-    year = y;
+  public MyDate(int day, int month, int year){
+    this.day = day;
+    this.month = month;
+    this.year = year;
+  }
+  public MyDate(){
+    day = 0;
+    month = 0;
+    year = 0;
+  }
+  public String toString(){
+    return "\n"+day+"/"+month+"/"+year;
   }
   public void setDay(int d){
     day = d;
@@ -28,6 +36,17 @@ public class MyDate
     return year;
   }
   public String displayDate(){
-    return day+"/"+month+"/"+year;
+    return "\n"+day+"/"+month+"/"+year;
+  }
+  public boolean isLeapYear(){
+    if(year%4==0){
+      if(year%100==0){
+        return year%400==0;
+      }
+      return true;
+    }else
+      {
+    return false;
+    }
   }
 }

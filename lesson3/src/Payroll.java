@@ -4,6 +4,17 @@ public class Payroll
  private double hourlyPayRate;
  private double workedHours;
 
+ public Payroll(String name, double hourlyPayRate, double workedHours){
+   this.name = name;
+   this.hourlyPayRate = hourlyPayRate;
+   this.workedHours = workedHours;
+ }
+ public Payroll(){
+   this.name = "";
+   this.hourlyPayRate = 0;
+   this.workedHours = 0;
+ }
+
  public void setName(String n){
    name = n;
  }
@@ -24,5 +35,8 @@ public class Payroll
  }
  public double grossPay(){
    return hourlyPayRate*workedHours;
+ }
+ public String toString(){
+   return "\nName: "+name+"\nPaycheck: "+grossPay();
  }
 }
