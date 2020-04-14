@@ -11,6 +11,8 @@ public class TestMyDate
     System.out.println(myBirthday.isBefore(herBirthday));
     herBirthday = MyDate.today();
     System.out.println(myBirthday.isBefore(herBirthday));
+    MyDate newb = herBirthday.copy();
+    System.out.println(newb);
 
     System.out.println(Area.getArea(3,10d));
     LandTract land1 = new LandTract(keyboard.nextDouble(),keyboard.nextDouble());
