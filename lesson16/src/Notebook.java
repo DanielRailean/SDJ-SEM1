@@ -64,10 +64,11 @@ private Note[] notes;
   }
   public int getNumberOfHighPriorityNotes(){
     int highPriorityNotes =0;
-    for(int i=0;i<numberOfNotes;i++){
-      if(notes[i].isHighPriority()){
+    for(int i =0; i< numberOfNotes;i++){
+      if(notes[i]!=null&&notes[i].isHighPriority()){
         highPriorityNotes++;
       }
+
     }
     return highPriorityNotes;
   }
@@ -103,6 +104,6 @@ private Note[] notes;
     System.out.println(biologie);
     biologie.addNote("prima pozitie");
     System.out.println(biologie);
-
+    biologie.getNumberOfHighPriorityNotes();
   }
 }
